@@ -1,5 +1,5 @@
 #!/bin/bash
-# WPA/WPA2 Cracking Install Script
+## WPA/WPA2 Cracking Install Script
 
 yum -y install python-devel zlib-devel openssl-devel libpcap-devel.x86_64 subversion screen glibc-devel
 yum -y install automake autoconf gcc-c++
@@ -15,7 +15,7 @@ cat > /etc/ld.so.conf.d/opt-python2.5.conf << EOF
 /opt/python2.5/lib
 EOF
 /sbin/ldconfig
-#ln -s /opt/python2.5/lib/lib/python2.5.so /opt/python2.5/lib/python2.5/config
+##ln -s /opt/python2.5/lib/lib/python2.5.so /opt/python2.5/lib/python2.5/config
 cd
 wget http://www.secdev.org/projects/scapy/files/scapy-2.1.0.tar.gz
 tar -xzf scapy-2.1.0.tar.gz
@@ -25,7 +25,7 @@ python2.5 setup.py install
 cd
 wget http://pyrit.googlecode.com/files/pyrit-0.4.0.tar.gz
 tar xvzf pyrit-0.4.0.tar.gz
-#svn checkout http://pyrit.googlecode.com/svn/trunk/ pyrit_svn
+##svn checkout http://pyrit.googlecode.com/svn/trunk/ pyrit_svn
 cd pyrit-0.4.0
 python2.5 setup.py build
 python2.5 setup.py install
